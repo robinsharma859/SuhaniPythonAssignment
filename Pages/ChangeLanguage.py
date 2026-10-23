@@ -27,7 +27,7 @@ class ChangeLanguage(AutomationBase):
         else:
             userLanguage = self.find_UIElements(By.XPATH,"//div[@id='icp-language-settings']//input");
      
-            print("Selecting user language")
+            print(f"Selecting user language: {language}")
             for x in userLanguage:
                 if  language.upper() in x.accessible_name.upper():
                     # radio = x.find_element(By.CLASS_NAME,'a-icon a-icon-radio')

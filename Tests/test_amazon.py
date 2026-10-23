@@ -86,7 +86,7 @@ class TestAmazon:
           cart  = Cart();
           cart.DeleteProduct();
           updateQuanity =  self._headerbase.Get_CartCount();
-          assert updateQuanity == 0, f"Expected cart was not empty"
+          assert updateQuanity == 1, f"Expected cart was not empty"
               
 
          

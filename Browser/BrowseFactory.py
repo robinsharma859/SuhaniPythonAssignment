@@ -40,5 +40,7 @@ class BrowserFactory:
         if driver is not None:
             driver.quit()
 
-
-factory = BrowserFactory.Create_Driver();
+    @staticmethod
+    def Get_Driver(browserName: str = BROWSER_NAME):
+        drivers = getattr( BrowserFactory._thread_state, "drivers",{})
+        return drivers.get(browserName)
